@@ -1,0 +1,7 @@
+<h3 ng-if="$ctrl.items.list.length">Items</h3>
+<ul>
+    <li ng-repeat="item in $ctrl.items.list" style="padding: 5px;">
+        {{item.name}}
+        <input class="btn btn-warning" type="button" value="Remove" ng-click="$ctrl.removeItem(item.id)"/>
+    </li>
+</ul>
