@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>WarsawJS Workshop #3 :: Shop Online</title>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-        <style>
-            .navbar>.container-fluid .navbar-brand {
-                padding: 10px 14px;
-            }
-        </style>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
-        <script src="app/index.js"></script>
-        <script src="app/services/ProductService.js"></script>
-        <script src="app/services/CartService.js"></script>
-        <script src="app/components/ProductComponent.js"></script>
-        <script src="app/components/ProductListComponent.js"></script>
-        <script src="app/components/CartComponent.js"></script>
-        <script src="app/components/ShopComponent.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WarsawJS Workshop #3 :: Shop Online</title>
 
-    </head>
-    <body ng-app="shop">
-        <shop-component></shop-component>
-    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+
+    <script src="app/index.js"></script>
+</head>
+<body ng-app="shop" ng-controller="IntroController">
+    <!--<shop></shop>-->
+    <input type="text" ng-model="inputModel.value">
+    <h1>{{inputModel.value}}</h1>
+    <ul>
+        <li ng-repeat="item in itemsList">{{item}}</li>
+    </ul>
+
+    <intro-directive obj-prop="testObj" text-prop="{{testText}}" fn-prop="callback(content)"></intro-directive>
+
+    <div style="width: 100px; height: 100px; background-color: red;" ng-if="cbox" ></div>
+</body>
 </html>
